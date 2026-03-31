@@ -130,6 +130,7 @@ func (r *QuoteResource) Create(ctx context.Context, req resource.CreateRequest, 
 	data.ID = types.StringValue(id)
 
 	tflog.Trace(ctx, "created quote "+id)
+	tflog.Trace(ctx, "created quote "+id)
 	resp.Diagnostics.Append(resp.Identity.Set(ctx, &identityData)...)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
